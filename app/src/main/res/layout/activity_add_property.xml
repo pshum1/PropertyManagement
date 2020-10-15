@@ -1,0 +1,79 @@
+<layout>
+    <data>
+        <variable
+            name="PropertyVM"
+            type="com.example.propertymanagement.ui.property.PropertyViewModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/et_address"
+            android:text="@={PropertyVM.address}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="address" />
+
+        <EditText
+            android:id="@+id/et_city"
+            android:text="@={PropertyVM.city}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="city" />
+
+        <EditText
+            android:id="@+id/et_state"
+            android:text="@={PropertyVM.state}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="state/province" />
+
+        <EditText
+            android:id="@+id/et_zip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="zip/postal code" />
+
+
+
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button_add_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="Add Photo" />
+
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:id="@+id/tv_path_property"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_marginTop="75dp"
+            android:onClick="@{PropertyVM::onAddPropertyButtonClick}"
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/button_add_image"
+            android:layout_centerHorizontal="true"
+            android:text="Submit" />
+
+
+    </LinearLayout>
+</layout>
