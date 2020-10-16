@@ -13,7 +13,7 @@ import com.example.propertymanagement.R
 import com.example.propertymanagement.data.models.User
 import com.example.propertymanagement.helpers.UserSessionManager
 import com.example.propertymanagement.helpers.d
-import com.example.propertymanagement.ui.todo.TodoActivity
+import com.example.propertymanagement.ui.todo.activities.TodoActivity
 import com.example.propertymanagement.ui.tenants.TenantsActivity
 import com.example.propertymanagement.ui.property.activities.AddPropertyActivity
 import com.example.propertymanagement.ui.start.MainActivity

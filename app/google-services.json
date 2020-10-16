@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "988276008461",
+    "firebase_url": "https://property-management-ccbd2.firebaseio.com",
+    "project_id": "property-management-ccbd2",
+    "storage_bucket": "property-management-ccbd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988276008461:android:2cab626c8dc4260452d744",
+        "android_client_info": {
+          "package_name": "com.example.propertymanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988276008461-c1d3t0vvdifi08je1vtgdh3hmbe6o4jc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAGQJfJM6EtQW1S94BQohT2th1UjRUhXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988276008461-c1d3t0vvdifi08je1vtgdh3hmbe6o4jc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
