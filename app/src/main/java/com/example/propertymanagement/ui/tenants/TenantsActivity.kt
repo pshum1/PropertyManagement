@@ -1,12 +1,14 @@
 
-package com.example.propertymanagement.ui.property
+package com.example.propertymanagement.ui.tenants
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.lifecycle.Observer
 import com.example.propertymanagement.R
 import com.example.propertymanagement.data.networks.PropertyManagementAPI
 import com.example.propertymanagement.data.repositories.UserRepository
+import kotlinx.android.synthetic.main.activity_tenants.*
 
 class TenantsActivity : AppCompatActivity() {
 
@@ -28,7 +30,12 @@ class TenantsActivity : AppCompatActivity() {
     }
 
     private fun getData() {
-        Log.d("tenantResponse", "Getting Data")
-        var tenants = UserRepository().getTenants()
+
+        val tenants = UserRepository().getTenants()
+
+        tenants.observe(this, Observer {
+            tv_tenants.text = "Tenant count: ${tenants.value?.count}"
+        })
+
     }
 }

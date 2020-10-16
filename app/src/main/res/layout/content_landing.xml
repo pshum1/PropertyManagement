@@ -1,24 +1,108 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
 
     <include layout="@layout/app_bar" />
 
-    <include
-        android:id="@+id/icon_property"
-        layout="@layout/icon_landing_layout"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:layout_above="@id/button_tenants"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3">
 
-    <Button
-        android:id="@+id/button_tenants"
-        android:layout_width="wrap_content"
+        <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="#fff"
+            android:src="@drawable/ic_baseline_notifications_24"/>
+
+
+
+        <include
+            android:id="@+id/icon_property"
+            layout="@layout/icon_landing_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/button_tenants"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="#fff"
+            android:src="@drawable/ic_baseline_person_24"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Get Tenants" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="#fff"
+            android:src="@drawable/ic_baseline_credit_card_24"/>
+
+        <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="#fff"
+            android:src="@drawable/ic_baseline_money_24"/>
 
 
-</RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/button_todo"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="#fff"
+            android:src="@drawable/ic_baseline_check_24"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="#fff"
+            android:src="@drawable/ic_baseline_directions_car_24"/>
+
+        <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="#fff"
+            android:src="@drawable/ic_baseline_insert_drive_file_24"/>
+
+
+
+        <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="#fff"
+            android:src="@drawable/ic_baseline_groups_24"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

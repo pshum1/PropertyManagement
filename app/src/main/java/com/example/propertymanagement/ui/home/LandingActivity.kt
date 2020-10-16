@@ -10,10 +10,11 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.propertymanagement.R
-import com.example.propertymanagement.app.Config
 import com.example.propertymanagement.data.models.User
 import com.example.propertymanagement.helpers.UserSessionManager
 import com.example.propertymanagement.helpers.d
+import com.example.propertymanagement.ui.todo.TodoActivity
+import com.example.propertymanagement.ui.tenants.TenantsActivity
 import com.example.propertymanagement.ui.property.activities.AddPropertyActivity
 import com.example.propertymanagement.ui.start.MainActivity
 import com.google.android.material.navigation.NavigationView
@@ -44,6 +45,8 @@ class LandingActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
         setupData()
 
         icon_property.setOnClickListener(this)
+        button_tenants.setOnClickListener(this)
+        button_todo.setOnClickListener(this)
     }
 
     private fun setupData() {
@@ -114,6 +117,8 @@ class LandingActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
     override fun onClick(view: View) {
         when (view) {
             icon_property -> startActivity(Intent(this, AddPropertyActivity::class.java))
+            button_tenants -> startActivity(Intent(this, TenantsActivity::class.java))
+            button_todo -> startActivity(Intent(this, TodoActivity::class.java))
         }
     }
 }
