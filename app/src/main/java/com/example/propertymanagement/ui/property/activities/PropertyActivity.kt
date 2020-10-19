@@ -62,4 +62,9 @@ class PropertyActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        getData()
+    }
+
 }

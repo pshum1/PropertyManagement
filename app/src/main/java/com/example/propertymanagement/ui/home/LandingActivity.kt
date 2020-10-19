@@ -1,6 +1,7 @@
 package com.example.propertymanagement.ui.home
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -31,6 +32,7 @@ class LandingActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
     lateinit var sessionManager: UserSessionManager
     lateinit var drawerLayout: DrawerLayout
     lateinit var navView: NavigationView
+    private val NUMBER = "3129932405"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,6 +94,11 @@ class LandingActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.item_contact_us -> {
+                val intent = Intent(Intent.ACTION_DIAL)
+                intent.data = Uri.parse("tel:"+ Uri.encode(NUMBER))
+                startActivity(intent)
+            }
             R.id.item_Logout -> dialogueLogout()
         }
         return true

@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.propertymanagement.R
 import com.example.propertymanagement.data.models.TodoList
+import com.example.propertymanagement.helpers.toast
 import com.example.propertymanagement.ui.todo.TodoListener
 import com.example.propertymanagement.ui.todo.TodoViewModel
 import com.example.propertymanagement.ui.todo.adapters.AdapterTodo
@@ -65,6 +66,7 @@ class TodoActivity : AppCompatActivity(), TodoListener {
 
     override fun onFailure(message: String) {
         Log.d("FirebaseDB", "activity ONFAILURE")
+        this.toast("No items retrieved")
         tv_no_items_todo.visibility = View.VISIBLE
     }
 

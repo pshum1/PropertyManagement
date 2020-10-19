@@ -15,18 +15,11 @@ class AdapterTodo(private val context: Context, private var list: ArrayList<Todo
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-//        val inflater: RowRecyclerTodoBinding = DataBindingUtil.inflate(
-//            LayoutInflater.from(parent.context),
-//            R.layout.row_recycler_todo,
-//            parent,
-//            false
-//        )
 
-        val view =
-            LayoutInflater.from(context).inflate(R.layout.row_recycler_todo, parent, false)!!
-        RowRecyclerTodoBinding.bind(view)
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = RowRecyclerTodoBinding.inflate(inflater)
 
-        return ViewHolder(view)
+        return ViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
@@ -43,13 +36,10 @@ class AdapterTodo(private val context: Context, private var list: ArrayList<Todo
         notifyDataSetChanged()
     }
 
-    inner class ViewHolder(itemView: View) :
-        RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(private val binding: RowRecyclerTodoBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(todoList: TodoList) {
-            val rowRecyclerTodoBinding =
-                DataBindingUtil.getBinding<RowRecyclerTodoBinding>(itemView)
-            rowRecyclerTodoBinding?.tvTaskTitle?.text = todoList.title
-            rowRecyclerTodoBinding?.tvTaskDescription?.text = todoList.description
+            binding.tvTaskTitle.text = todoList.title
+            binding.tvTaskDescription.text = todoList.description
         }
     }
 

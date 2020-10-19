@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/contact_us"
+    <item android:id="@+id/item_contact_us"
         android:title="Contact Us"/>
 
     <item android:id="@+id/item_rate_us"

@@ -1,8 +1,8 @@
 <layout>
     <data>
         <variable
-            name="todoVM"
-            type="com.example.propertymanagement.ui.todo.TodoViewModel" />
+            name="todoList"
+            type="com.example.propertymanagement.data.models.TodoList" />
 
     </data>
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +16,7 @@
             android:textColor="@color/colorTextContrast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@={todoVM.title}"
+            android:text="@{todoList.title}"
             android:textSize="21sp" />
 
         <TextView
@@ -26,7 +26,7 @@
             android:textSize="16sp"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_task_title"
-            android:text="@={todoVM.description}" />
+            android:text="@{todoList.description}" />
 
 
     </RelativeLayout>
