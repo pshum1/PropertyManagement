@@ -16,6 +16,7 @@ import com.example.propertymanagement.helpers.d
 import com.example.propertymanagement.ui.todo.activities.TodoActivity
 import com.example.propertymanagement.ui.tenants.TenantsActivity
 import com.example.propertymanagement.ui.property.activities.AddPropertyActivity
+import com.example.propertymanagement.ui.property.activities.PropertyActivity
 import com.example.propertymanagement.ui.start.MainActivity
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_landing.*
@@ -47,6 +48,7 @@ class LandingActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
         icon_property.setOnClickListener(this)
         button_tenants.setOnClickListener(this)
         button_todo.setOnClickListener(this)
+        button_property_list.setOnClickListener(this)
     }
 
     private fun setupData() {
@@ -119,6 +121,7 @@ class LandingActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
             icon_property -> startActivity(Intent(this, AddPropertyActivity::class.java))
             button_tenants -> startActivity(Intent(this, TenantsActivity::class.java))
             button_todo -> startActivity(Intent(this, TodoActivity::class.java))
+            button_property_list -> startActivity(Intent(this, PropertyActivity::class.java))
         }
     }
 }

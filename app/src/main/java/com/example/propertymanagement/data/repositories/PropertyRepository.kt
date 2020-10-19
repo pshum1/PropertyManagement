@@ -3,10 +3,7 @@ package com.example.propertymanagement.data.repositories
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.propertymanagement.data.models.ImageDetails
-import com.example.propertymanagement.data.models.Property
-import com.example.propertymanagement.data.models.PropertyImageResponse
-import com.example.propertymanagement.data.models.PropertyResponse
+import com.example.propertymanagement.data.models.*
 import com.example.propertymanagement.data.networks.PropertyManagementAPI
 import okhttp3.MultipartBody
 import retrofit2.Call
@@ -68,6 +65,38 @@ class PropertyRepository {
                 }
 
             })
+        return propertyResponse
+    }
+
+    //GET PROPERTY
+    fun getProperty(id: String): LiveData<GetPropertyResponse>{
+
+        val propertyResponse = MutableLiveData<GetPropertyResponse>()
+
+        Log.d("GetProperties", "Get Property Started")
+        Log.d("GetProperties", "id passed: " + id)
+
+        propertyApi.getProperty(id)
+            .enqueue(object : Callback<GetPropertyResponse>{
+
+                override fun onResponse(
+                    call: Call<GetPropertyResponse>,
+                    response: Response<GetPropertyResponse>
+                ) {
+                    if(response.isSuccessful){
+                        propertyResponse.value = response.body()
+                        Log.d("GetProperties", "API RESPONSE: " + propertyResponse.value.toString())
+                    } else {
+                        propertyResponse.postValue(null)
+                    }
+                }
+
+                override fun onFailure(call: Call<GetPropertyResponse>, t: Throwable) {
+                    Log.d("GetProperties", "API RESPONSE: " + t.message)
+                }
+
+            })
+
         return propertyResponse
     }
 }

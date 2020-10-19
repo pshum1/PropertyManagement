@@ -6,7 +6,6 @@ data class TodoList (
 ){
 
     companion object{
-        const val COLLECTION = "users"
         const val COLLECTION_NAME = "todo"
     }
 }

@@ -43,9 +43,9 @@ class LandlordFragment : Fragment(), AuthListener {
         response.observe(this, Observer {
             if (response.value?.error == true) {
                 activity!!.toast(response.value?.message!!)
-                binding.etRegisterEmail.text.clear()
-                binding.etRegisterPassword.text.clear()
-                binding.etRegisterConfirmPassword.text.clear()
+                binding.etRegisterEmail.text?.clear()
+                binding.etRegisterPassword.text?.clear()
+                binding.etRegisterConfirmPassword.text?.clear()
             } else {
                 activity!!.toast("Registration Successful!")
                 activity!!.finish()

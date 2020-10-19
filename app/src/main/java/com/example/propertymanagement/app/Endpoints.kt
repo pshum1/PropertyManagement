@@ -8,5 +8,6 @@ class Endpoints {
         const val URL_TENANT = "tenant"
         const val URL_UPLOAD_IMAGE = "upload/property/picture"
         const val URL_ADD_PROPERTY = "property"
+        const val URL_GET_PROPERTY = "$URL_ADD_PROPERTY/user/"
     }
 }

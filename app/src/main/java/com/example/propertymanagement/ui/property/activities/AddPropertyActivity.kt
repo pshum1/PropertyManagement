@@ -4,17 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.propertymanagement.R
-import com.example.propertymanagement.data.models.ImageDetails
+import com.example.propertymanagement.data.models.GetPropertyResponse
 import com.example.propertymanagement.data.models.PropertyResponse
 import com.example.propertymanagement.databinding.ActivityAddPropertyBinding
 import com.example.propertymanagement.helpers.toast
 import com.example.propertymanagement.ui.property.PropertyListener
 import com.example.propertymanagement.ui.property.PropertyViewModel
 import com.example.propertymanagement.ui.property.fragments.BottomSheetFragment
-import kotlinx.android.synthetic.main.activity_add_property.*
 
 class AddPropertyActivity : AppCompatActivity(), PropertyListener {
 

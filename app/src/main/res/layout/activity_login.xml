@@ -1,4 +1,4 @@
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
@@ -7,39 +7,77 @@
             type="com.example.propertymanagement.ui.auth.AuthViewModel" />
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/home_logo"/>
 
         <TextView
             android:id="@+id/tv_login"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="32dp"
-            android:text="LOGIN"
+            android:text="Login"
             android:textSize="32sp" />
 
-        <EditText
-            android:id="@+id/et_login_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:text="@={authVM.email}" />
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorTextContrastDark" />
 
-        <EditText
-            android:id="@+id/et_login_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:text="@={authVM.password}" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/EditTextViewFloat"
+            android:layout_marginTop="16dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_login_email"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextContrast"
+                android:hint="Email"
+                android:textSize="14sp"
+                android:text="@={authVM.email}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/EditTextViewFloat">
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_login_password"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorTextContrast"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Password"
+                android:textSize="14sp"
+                android:layout_marginBottom="25dp"
+                android:inputType="textPassword"
+                android:text="@={authVM.password}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
 
         <Button
+            android:background="@color/colorAccentLighter"
             android:id="@+id/button_login"
+            android:textColor="@color/colorTextContrast"
             android:layout_width="match_parent"
+            android:textAllCaps="false"
             android:layout_height="wrap_content"
             android:onClick="@{authVM::onLoginButtonClick}"
             android:text="Login" />

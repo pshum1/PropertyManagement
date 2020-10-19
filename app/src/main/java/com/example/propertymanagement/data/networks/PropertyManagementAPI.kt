@@ -31,7 +31,10 @@ interface PropertyManagementAPI {
     ): Call<PropertyImageResponse>
 
     @POST(Endpoints.URL_ADD_PROPERTY)
-    fun addProperty(@Body property: Property): Call<PropertyResponse>
+    fun addProperty(@Body property: Property): Call<PropertyResponse> //ADD PROPERTY
+
+    @GET(Endpoints.URL_GET_PROPERTY+"{userId}")
+    fun getProperty(@Path("userId") userId: String): Call<GetPropertyResponse>
 
     companion object {
         operator fun invoke(): PropertyManagementAPI {

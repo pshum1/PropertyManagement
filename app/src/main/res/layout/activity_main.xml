@@ -1,19 +1,38 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/colorBackground">
+
+    <ImageView
+        android:layout_marginTop="45dp"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:src="@drawable/home_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/button_register"
-        android:text="register"
+        android:text="Register"
+        android:textColor="@color/colorTextContrast"
+        android:background="#9b742f"
+        android:textSize="14sp"
+        android:layout_above="@id/button_login"
         android:layout_width="match_parent"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp"
         android:layout_height="wrap_content"/>
 
     <Button
+        android:textAllCaps="false"
         android:id="@+id/button_login"
-        android:text="login"
+        android:textSize="14sp"
+        android:text="Login"
+        android:textColor="@color/colorTextContrast"
+        android:background="#9b742f"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-</LinearLayout>
+</RelativeLayout>

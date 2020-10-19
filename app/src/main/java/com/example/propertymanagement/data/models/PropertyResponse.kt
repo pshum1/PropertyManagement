@@ -6,12 +6,19 @@ data class PropertyResponse(
     val message: String
 )
 
+data class GetPropertyResponse(
+    val `data`: ArrayList<Property>? = null,
+    val error: Boolean,
+)
+
 data class Property(
     val _id: String? = null,
     val address: String? = null,
     val city: String? = null,
+    val country: String? = null,
     val image: String? = null,
     val mortageInfo: Boolean? = null,
     val propertyStatus: Boolean? = null,
+    val purchasePrice: String? = null,
     val state: String? = null
 )

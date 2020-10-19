@@ -1,108 +1,192 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
 
     <include layout="@layout/app_bar" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         android:weightSum="3">
 
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#fff"
-            android:src="@drawable/ic_baseline_notifications_24"/>
-
-
-
-        <include
-            android:id="@+id/icon_property"
-            layout="@layout/icon_landing_layout"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/button_tenants"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#fff"
-            android:src="@drawable/ic_baseline_person_24"/>
+            <ImageButton
+                android:layout_width="65dp"
+
+                android:layout_height="65dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorBackground"
+                android:src="@drawable/ic_baseline_notifications_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Notifications"
+                android:textColor="@color/colorAccent" />
 
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/icon_property"
+                layout="@layout/icon_landing_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LandingButtonLayout">
+
+            <ImageButton
+                android:id="@+id/button_tenants"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="@color/colorBackground"
+                android:src="@drawable/ic_baseline_person_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="Tenants"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         android:weightSum="3">
 
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#fff"
-            android:src="@drawable/ic_baseline_credit_card_24"/>
+        <LinearLayout style="@style/LandingButtonLayout">
 
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#fff"
-            android:src="@drawable/ic_baseline_money_24"/>
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="@color/colorBackground"
+                android:src="@drawable/ic_baseline_credit_card_24" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="Transactions"
+                android:textColor="@color/colorAccent" />
 
+        </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/button_todo"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#fff"
-            android:src="@drawable/ic_baseline_check_24"/>
+        <LinearLayout style="@style/LandingButtonLayout">
 
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="@color/colorBackground"
+                android:src="@drawable/ic_baseline_money_24" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="Collect Rent"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LandingButtonLayout">
+
+            <ImageButton
+                android:id="@+id/button_todo"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:background="@color/colorBackground"
+                android:src="@drawable/ic_baseline_check_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="To-Do List"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         android:weightSum="3">
 
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#fff"
-            android:src="@drawable/ic_baseline_directions_car_24"/>
+        <LinearLayout style="@style/LandingButtonLayout">
 
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#fff"
-            android:src="@drawable/ic_baseline_insert_drive_file_24"/>
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@color/colorBackground"
+                android:src="@drawable/ic_baseline_directions_car_24" />
 
+        </LinearLayout>
 
+        <LinearLayout style="@style/LandingButtonLayout">
 
-        <ImageButton
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:background="#fff"
-            android:src="@drawable/ic_baseline_groups_24"/>
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@color/colorBackground"
+                android:src="@drawable/ic_baseline_insert_drive_file_24" />
 
+        </LinearLayout>
 
+        <LinearLayout style="@style/LandingButtonLayout">
+
+            <ImageButton
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@color/colorBackground"
+                android:src="@drawable/ic_baseline_groups_24" />
+
+        </LinearLayout>
 
 
     </LinearLayout>
 
-
-
+    <Button
+        android:id="@+id/button_property_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="property list" />
 
 
 </LinearLayout>

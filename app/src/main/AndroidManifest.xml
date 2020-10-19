@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.todo.activities.AddTodoItemActivity"></activity>
+        <activity android:name=".ui.property.activities.PropertyActivity"></activity>
+        <activity android:name=".ui.todo.activities.AddTodoItemActivity" />
         <activity android:name=".ui.todo.activities.TodoActivity" />
         <activity android:name=".ui.home.LandingActivity" />
         <activity android:name=".ui.start.SplashActivity">

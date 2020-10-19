@@ -42,6 +42,10 @@ class AuthViewModel: ViewModel() {
             authListener?.failure("Passwords do not match")
             return false
         }
+        if(name.isNullOrBlank() || email.isNullOrEmpty()){
+            authListener?.failure("Please enter all fields")
+            return false
+        }
         return true
     }
 

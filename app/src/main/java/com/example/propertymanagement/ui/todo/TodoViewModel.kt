@@ -7,7 +7,7 @@ import com.example.propertymanagement.data.models.TodoList
 import com.example.propertymanagement.data.models.User
 import com.google.firebase.database.*
 
-class TodoViewModel : ViewModel() {
+class  TodoViewModel : ViewModel() {
 
     private val databaseReference: DatabaseReference =
         FirebaseDatabase.getInstance().getReference(TodoList.COLLECTION_NAME).child(

@@ -39,6 +39,13 @@
             android:layout_height="wrap_content"
             android:hint="zip/postal code" />
 
+        <EditText
+            android:id="@+id/et_price"
+            android:text="@={PropertyVM.purchasePrice}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="purchase price"/>
+
 
 
         <LinearLayout

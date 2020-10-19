@@ -1,5 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <data>
+
         <variable
             name="authVM"
             type="com.example.propertymanagement.ui.auth.AuthViewModel" />
@@ -8,56 +10,105 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="45dp"
             android:layout_marginBottom="32dp"
-            android:text="REGISTER"
-            android:textSize="32sp" />
+            android:text="Register"
+            android:textColor="@color/colorAccent"
+            android:textSize="32sp"
+            android:textStyle="italic" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorTextContrastDark" />
 
-        <EditText
-            android:text="@={authVM.name}"
-            android:id="@+id/et_register_name"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name" />
+            android:layout_marginTop="16dp"
+            android:hint="Name"
+            android:padding="8dp"
+            android:textColorHint="@color/colorTextContrastDark">
 
-        <EditText
-            android:text="@={authVM.email}"
-            android:id="@+id/et_register_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_register_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:text="@={authVM.name}"
+                android:textColor="@color/colorTextContrast"
+                android:textColorHighlight="@color/colorAccent"
+                android:textSize="14sp" />
 
-        <EditText
-            android:text="@={authVM.password}"
-            android:id="@+id/et_register_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:text="@={authVM.confirmPassword}"
-            android:id="@+id/et_register_confirm_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="Confirm Password"
-            android:inputType="textPassword" />
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Email"
+                android:text="@={authVM.email}"
+                android:textColor="@color/colorTextContrast"
+                android:textColorHint="@color/colorTextContrast"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:text="@={authVM.password}"
+                android:textColor="@color/colorTextContrast"
+                android:textColorHint="@color/colorTextContrast"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_register_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:text="@={authVM.confirmPassword}"
+                android:textColor="@color/colorTextContrast"
+                android:textColorHint="@color/colorTextContrast"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <Button
-            android:onClick="@{authVM::onRegisterButtonLandlordClick}"
             android:id="@+id/button_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register" />
+            android:background="@color/colorAccentLighter"
+            android:onClick="@{authVM::onRegisterButtonLandlordClick}"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextContrast" />
 
     </LinearLayout>
 </layout>

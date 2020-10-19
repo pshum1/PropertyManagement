@@ -17,7 +17,7 @@ class AddTodoItemActivity : AppCompatActivity(), TodoListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_todo_item)
+//        setContentView(R.layout.activity_add_todo_item)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_add_todo_item)
         val viewModel = ViewModelProviders.of(this).get(TodoViewModel::class.java)
