@@ -7,5 +7,5 @@ interface PropertyListener {
 
     fun onStarted()
     fun onSuccess(response: LiveData<PropertyResponse>)
-    fun onFailure()
+    fun onFailure(message: String)
 }

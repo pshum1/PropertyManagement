@@ -1,0 +1,39 @@
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/app_bar"/>
+
+    <Button
+        android:layout_marginTop="21dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a new tenant"
+        android:textColor="@color/colorTextContrast"
+        android:background="@color/colorAccentLighter"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button_all_tenants"
+        android:layout_marginTop="21dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="All tenants"
+        android:textColor="@color/colorTextContrast"
+        android:background="@color/colorAccentLighter"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_marginTop="21dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Applicants"
+        android:textColor="@color/colorTextContrast"
+        android:background="@color/colorAccentLighter"
+        android:textAllCaps="false"/>
+
+
+
+</LinearLayout>

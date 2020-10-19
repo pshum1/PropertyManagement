@@ -27,6 +27,7 @@ class PropertyRepository {
                         ImageDetails.PROPERTY_IMAGE_PATH =
                             response.body()?.data?.location.toString()
                         Log.d("uploadImageResponse", "location " + ImageDetails.PROPERTY_IMAGE_PATH)
+
                     } else {
                         Log.d("uploadImageResponse", "error " + response.message().toString())
                     }

@@ -3,6 +3,7 @@ package com.example.propertymanagement.helpers
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
+import com.example.propertymanagement.data.models.User
 import com.example.propertymanagement.data.models.UserResponse
 
 class UserSessionManager (context: Context){
@@ -37,6 +38,12 @@ class UserSessionManager (context: Context){
             Log.d("loginStatus", "nothing here")
             false
         }
+    }
+
+    fun getUser(): User?{
+        val name = sharePreferences.getString(KEY_NAME, null)
+        val email = sharePreferences.getString(KEY_EMAIL, null)
+        return User(name = name, email = email)
     }
 
     fun getToken(): String?{

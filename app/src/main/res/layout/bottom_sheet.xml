@@ -4,39 +4,51 @@
     android:background="@color/colorAccent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/button_open_camera"
-            android:layout_width="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:background="@color/colorAccent"
             android:drawableLeft="@drawable/ic_baseline_camera_alt_24"
             android:padding="16dp"
-            android:text="Camera"
-            android:textAllCaps="false" />
+            android:text="   Camera"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextContrast" />
 
-    </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_alignBottom="@id/button_open_camera"/>
 
-    <LinearLayout
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/button_open_gallery"
-            android:layout_width="match_parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:background="@color/colorAccent"
-            android:drawableStart="@drawable/ic_baseline_image_search_24"
+            android:drawableLeft="@drawable/ic_baseline_image_search_24"
             android:padding="16dp"
-            android:text="Gallery"
-            android:textAllCaps="false" />
+            android:text="   Gallery"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextContrast" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>

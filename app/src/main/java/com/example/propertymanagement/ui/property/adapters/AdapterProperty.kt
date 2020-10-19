@@ -38,7 +38,7 @@ class AdapterProperty(var list: ArrayList<Property>): RecyclerView.Adapter<Adapt
             binding.tvPropertyCity.text = property.city
             binding.tvPropertyState.text = " ,${property.state}"
             binding.tvPropertyCountry.text = property.country
-            binding.tvPropertyPrice.text = property.purchasePrice
+            binding.tvPropertyPrice.text = "$" + property.purchasePrice
             Picasso.get().load(property.image).placeholder(R.drawable.ic_baseline_money_24).error(R.drawable.ic_baseline_notifications_24).into(binding.imgViewProperties)
         }
     }

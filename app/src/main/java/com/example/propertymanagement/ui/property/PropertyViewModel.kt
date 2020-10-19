@@ -23,6 +23,10 @@ class PropertyViewModel : ViewModel() {
 
     fun onAddPropertyButtonClick(view: View) {
 
+        if(address.isNullOrEmpty()||address.isNullOrEmpty()||city.isNullOrEmpty()||state.isNullOrEmpty()||purchasePrice.isNullOrEmpty()){
+            propertyListener?.onFailure("Please fill all fields")
+        }
+
         val img = ImageDetails.PROPERTY_IMAGE_PATH
 
         val property = Property(_id = id, address = address, city = city, state = state, image = img, purchasePrice = purchasePrice)

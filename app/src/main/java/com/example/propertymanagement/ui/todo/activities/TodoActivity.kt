@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +14,7 @@ import com.example.propertymanagement.ui.todo.TodoListener
 import com.example.propertymanagement.ui.todo.TodoViewModel
 import com.example.propertymanagement.ui.todo.adapters.AdapterTodo
 import kotlinx.android.synthetic.main.activity_todo.*
+import kotlinx.android.synthetic.main.app_bar.*
 
 class TodoActivity : AppCompatActivity(), TodoListener {
 
@@ -33,6 +35,8 @@ class TodoActivity : AppCompatActivity(), TodoListener {
 
     private fun init() {
 
+        setupToolbar()
+
 
         viewModel.getData()
 
@@ -47,7 +51,7 @@ class TodoActivity : AppCompatActivity(), TodoListener {
     }
 
     override fun onSuccess(list: ArrayList<TodoList>) {
-        tv_no_items_todo.visibility = View.GONE
+        //tv_no_items_todo.visibility = View.GONE
 
 
     }
@@ -66,5 +70,19 @@ class TodoActivity : AppCompatActivity(), TodoListener {
 
     override fun onComplete() {
 
+    }
+
+    private fun setupToolbar() {
+        var toolbar = toolbar_general
+        toolbar.title = "To-do List"
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            android.R.id.home -> finish()
+        }
+        return true
     }
 }

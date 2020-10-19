@@ -1,5 +1,7 @@
 <layout>
+
     <data>
+
         <variable
             name="PropertyVM"
             type="com.example.propertymanagement.ui.property.PropertyViewModel" />
@@ -9,77 +11,136 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/et_address"
-            android:text="@={PropertyVM.address}"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="address" />
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="32dp"
+            android:text="Login"
+            android:textColor="@color/colorAccent"
+            android:textSize="32sp"
+            android:textStyle="italic" />
 
-        <EditText
-            android:id="@+id/et_city"
-            android:text="@={PropertyVM.city}"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="city" />
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
 
-        <EditText
-            android:id="@+id/et_state"
-            android:text="@={PropertyVM.state}"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="state/province" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Address"
+                android:text="@={PropertyVM.address}"
+                android:textSize="14sp" />
 
-        <EditText
-            android:id="@+id/et_zip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="zip/postal code" />
 
-        <EditText
-            android:id="@+id/et_price"
-            android:text="@={PropertyVM.purchasePrice}"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="purchase price"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
+
+            <EditText
+                android:id="@+id/et_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="City"
+                android:text="@={PropertyVM.city}"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
+
+            <EditText
+                android:id="@+id/et_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="State/Province"
+                android:text="@={PropertyVM.state}"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
+
+            <EditText
+                android:id="@+id/et_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Zip/Postal code"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
+
+            <EditText
+                android:id="@+id/et_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Purchase Price"
+                android:inputType="number"
+                android:text="@={PropertyVM.purchasePrice}"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
         <LinearLayout
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
 
             <Button
+                android:layout_marginLeft="16dp"
                 android:id="@+id/button_add_image"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
-                android:text="Add Photo" />
+                android:background="@color/colorAccentLighter"
+                android:text="Add Photo"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextContrast" />
 
             <TextView
-                android:layout_marginLeft="16dp"
                 android:id="@+id/tv_path_property"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/colorTextContrast" />
 
         </LinearLayout>
 
-
-        <Button
-            android:layout_marginTop="75dp"
-            android:onClick="@{PropertyVM::onAddPropertyButtonClick}"
-            android:id="@+id/button_submit"
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_morgage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:text="Does this property have a mortgage?"
+            android:textColor="@color/colorTextContrast"
+            android:layout_margin="16dp"
+            android:textSize="16sp"/>
+
+
+        <Button
+            android:layout_marginTop="16dp"
+            android:id="@+id/button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/button_add_image"
             android:layout_centerHorizontal="true"
-            android:text="Submit" />
+            android:layout_gravity="center"
+            android:background="@color/colorAccentLighter"
+            android:onClick="@{PropertyVM::onAddPropertyButtonClick}"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="Submit"
+            android:textColor="@color/colorTextContrast" />
 
 
     </LinearLayout>

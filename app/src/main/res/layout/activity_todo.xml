@@ -1,42 +1,50 @@
 <layout>
-    <RelativeLayout android:layout_width="match_parent"
+    <LinearLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
+        android:orientation="vertical"
+        android:background="@color/colorBackground"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <TextView
-            android:id="@+id/tv_todo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="To-Do:"
-            android:textSize="28dp"/>
+        <include layout="@layout/app_bar"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_todo"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="match_parent">
 
-            android:layout_below="@id/tv_todo"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_todo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"/>
 
-        <TextView
-            android:id="@+id/tv_no_items_todo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No Items added to list"
-            android:textSize="21sp"
-            android:layout_centerInParent="true"
-            android:textStyle="italic"/>
+            <TextView
+                android:id="@+id/tv_no_items_todo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextContrast"
+                android:text="No Items added to list"
+                android:textSize="21sp"
+                android:layout_centerInParent="true"
+                android:textStyle="italic"/>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/button_add_floating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:outlineSpotShadowColor="#fff"
-            android:padding="15dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimary"
-            android:src="@drawable/ic_baseline_add_24"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/button_add_floating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:outlineSpotShadowColor="@color/colorAccent"
+                android:layout_margin="15dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_baseline_add_24"/>
 
-    </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
 </layout>

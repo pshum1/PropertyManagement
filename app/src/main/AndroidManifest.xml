@@ -14,7 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.property.activities.PropertyActivity"></activity>
+        <activity android:name=".ui.VendorsActivity"></activity>
+        <activity android:name=".ui.DocumentsActivity" />
+        <activity android:name=".ui.TripsActivity" />
+        <activity android:name=".ui.CollectRentActivity" />
+        <activity android:name=".ui.TransactionsActivity" />
+        <activity android:name=".ui.NotificationsActivity" />
+        <activity android:name=".ui.tenants.TenantsOptionActivity" />
+        <activity android:name=".ui.property.activities.PropertyActivity" />
         <activity android:name=".ui.todo.activities.AddTodoItemActivity" />
         <activity android:name=".ui.todo.activities.TodoActivity" />
         <activity android:name=".ui.home.LandingActivity" />

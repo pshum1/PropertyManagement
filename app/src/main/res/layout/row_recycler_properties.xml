@@ -1,5 +1,7 @@
 <layout>
+
     <data>
+
         <variable
             name="propertyData"
             type="com.example.propertymanagement.data.models.Property" />
@@ -12,43 +14,54 @@
 
         <ImageView
             android:id="@+id/img_view_properties"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
+            android:layout_width="150dp"
+            android:layout_height="95dp"
             android:layout_marginRight="16dp" />
 
         <TextView
             android:id="@+id/tv_property_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/img_view_properties" />
+            android:layout_toRightOf="@id/img_view_properties"
+            android:textColor="@color/colorTextContrast" />
 
         <TextView
             android:id="@+id/tv_property_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_property_address"
-            android:layout_toRightOf="@id/img_view_properties" />
+            android:layout_toRightOf="@id/img_view_properties"
+            android:textColor="@color/colorTextContrast" />
 
         <TextView
             android:id="@+id/tv_property_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/tv_property_city"
-            android:layout_toRightOf="@id/tv_property_city" />
+            android:layout_toRightOf="@id/tv_property_city"
+            android:textColor="@color/colorTextContrast" />
 
         <TextView
             android:id="@+id/tv_property_country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_property_state"
-            android:layout_toRightOf="@id/img_view_properties" />
+            android:layout_toRightOf="@id/img_view_properties"
+            android:textColor="@color/colorTextContrast" />
 
         <TextView
             android:id="@+id/tv_property_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_property_country"
-            android:layout_toRightOf="@id/img_view_properties" />
+            android:layout_toRightOf="@id/img_view_properties"
+            android:textColor="@color/colorTextContrast" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@id/img_view_properties"
+            android:background="@color/colorAccentLighter" />
 
     </RelativeLayout>
 

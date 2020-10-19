@@ -10,36 +10,94 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="21dp"
             android:layout_marginBottom="21dp"
             android:text="Add New Item:"
-            android:textSize="21sp" />
+            android:textColor="@color/colorAccent"
+            android:textSize="32sp" />
 
-        <EditText
-            android:id="@+id/et_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Title"
-            android:text="@={todoVM.title}" />
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
 
-        <EditText
-            android:id="@+id/et_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Description"
-            android:text="@={todoVM.description}" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Priority"
+                android:textColor="@color/colorTextContrast"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Title"
+                android:text="@={todoVM.title}"
+                android:textColor="@color/colorTextContrast"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
+
+
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Description"
+                android:text="@={todoVM.description}"
+                android:textColor="@color/colorTextContrast"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/EditTextViewFloat">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccentLighter"
+                android:hint="Due Date"
+                android:textColor="@color/colorTextContrast"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/button_add_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="29dp"
+            android:background="@color/colorAccentLighter"
+            android:text="Add Photo"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextContrast" />
+
+
+        <Button
+            android:layout_marginTop="35dp"
             android:id="@+id/button_add"
-            android:onClick="@{todoVM::onButtonAddClicked}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="add" />
+            android:background="@color/colorAccentLighter"
+            android:onClick="@{todoVM::onButtonAddClicked}"
+            android:text="Add to list"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextContrast" />
 
 
     </LinearLayout>

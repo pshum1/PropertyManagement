@@ -50,10 +50,11 @@ class AddPropertyActivity : AppCompatActivity(), PropertyListener {
         response.observe(this, Observer {
             this.toast(response.value?.message!!)
         })
+        finish()
     }
 
-    override fun onFailure() {
-
+    override fun onFailure(message: String) {
+        this.toast(message)
     }
 
 
